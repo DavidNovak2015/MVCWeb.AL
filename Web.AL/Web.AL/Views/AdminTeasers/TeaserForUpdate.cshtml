@@ -1,0 +1,80 @@
+﻿@model Web.AL.Models.AdminTeasersViewModel
+@{
+    ViewBag.Title = "AdminTeaserUpdate";
+}
+
+<h2>Abbildung einer Rubrik im Zwecke ihrer Änderung</h2><br />
+
+@using (Html.BeginForm("UpdateTeaser", "AdminTeasers",FormMethod.Post, new { enctype="multipart/form-data"}))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="row">
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.TeaserOld.Id , new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.TeaserOld.Id, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.TeaserOld.Title, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.TeaserOld.Title, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.TeaserOld.Text, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.TeaserOld.Text, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.TeaserOld.DateOfTeaser, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.TeaserOld.DateOfTeaser,@"{0:dd/MM/yyyy}", new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            <img src="@Model.TeaserOld.ImageName" width="150" />
+        </div>
+
+    </div><br />
+    <p><h4><strong>Geben Sie bitte neue Angaben an oder lassen Sie die ursprüngliche Fassung</strong></h4></p><br/>
+
+    <div class="form-horizontal">
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TeaserNew.Title, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TeaserNew.Title, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.TeaserNew.Title, "", new { @class = "text-danger" })
+            </div>
+        </div><br />
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TeaserNew.Text, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TeaserNew.Text, new { @class = "form-control" })
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            @Html.LabelFor(model => model.TeaserNew.DateOfTeaser, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TeaserNew.DateOfTeaser, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.TeaserNew.DateOfTeaser, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TeaserNew.Image, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.TeaserNew.Image, new { @type="file", @accept=".jpg", @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="ändern" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+
+    @Html.ActionLink("Zurück zur Administration", "Option", "AdminOption")
+
+}

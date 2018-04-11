@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "AdminOption";
+}
+
+<h2>Administration der web Seiten</h2>
+
+<h4> @Html.ActionLink("Änderung der Kopfseite", "UpdateHeader", "AdminHeader", null, new { @class = "btn btn-default" })</h4><br/>
+
+<h4> @Html.ActionLink("Änderung der Fußseite", "UpdateFooter", "AdminFooter", null, new { @class= "btn btn-default" })</h4><br/><br/>
+
+
+<h4> @Html.ActionLink("Abbildung aller Rubriken", "Display", "AdminTeasers", null,  new { @class = "btn btn-default" })</h4><br />
+
+<h4> @Html.ActionLink("Änderung einer Rubrik aufgrund ID", "Update", "AdminTeasers", null, new { @class = "btn btn-default" })</h4><br />
+
+<h4> @Html.ActionLink("Löschung eines Bildes", "DisplayImages", "AdminImage", null, new { @class = "btn btn-default" })</h4>
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+C:\Repos\training-david\Web.AL\Web.CL\bin\Debug\Web.CL.dll
+C:\Repos\training-david\Web.AL\Web.CL\bin\Debug\Web.CL.pdb
+C:\Repos\training-david\Web.AL\Web.CL\obj\Debug\Web.CL.csprojResolveAssemblyReference.cache
+C:\Repos\training-david\Web.AL\Web.CL\obj\Debug\Web.CL.dll
+C:\Repos\training-david\Web.AL\Web.CL\obj\Debug\Web.CL.pdb

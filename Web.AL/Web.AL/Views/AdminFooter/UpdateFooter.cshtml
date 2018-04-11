@@ -1,0 +1,596 @@
+﻿@model Web.AL.Models.AdminFooterViewModel
+@{
+    ViewBag.Title = "UpdateFooter";
+}
+
+<h2>Änderung der Fußseite</h2>
+
+@using (Html.BeginForm())
+{
+    Html.AntiForgeryToken();
+    Html.ValidationSummary(true);
+
+    <div class="row">
+    
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Title1, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Title1, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Title2, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Title2, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+    </div><br />
+
+    @Html.LabelFor(model => model.FooterOld.Link1, new { @class = "control-label col-md-2" })
+
+    <div class="row">
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Text1, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Text1, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link1.LinkText, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link1.LinkText, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link1.LinkAddress, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link1.LinkAddress, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+    </div><br /><br />
+
+    @Html.LabelFor(model => model.FooterOld.Link2, new { @class = "control-label col-md-2" })
+
+    <div class="row">
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Text2, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Text2, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link2.LinkText, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link2.LinkText, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link2.LinkAddress, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link2.LinkAddress, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+    </div><br /><br />
+
+    @Html.LabelFor(model => model.FooterOld.Link3, new { @class = "control-label col-md-2" })
+
+    <div class="row">
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Text3, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Text3, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link3.LinkText, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link3.LinkText, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link3.LinkAddress, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link3.LinkAddress, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+    </div><br /><br />
+
+    @Html.LabelFor(model => model.FooterOld.Link4, new { @class = "control-label col-md-2" })
+
+    <div class="row">
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Text4, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Text4, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link4.LinkText, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link4.LinkText, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link4.LinkAddress, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link4.LinkAddress, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+    </div><br /><br />
+
+    @Html.LabelFor(model => model.FooterOld.Link5, new { @class = "control-label col-md-2" })
+
+    <div class="row">
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Text5, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Text5, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link5.LinkText, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link5.LinkText, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link5.LinkAddress, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link5.LinkAddress, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+    </div><br /><br />
+
+    @Html.LabelFor(model => model.FooterOld.Link6, new { @class = "control-label col-md-2" })
+
+    <div class="row">
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Text6, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Text6, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link6.LinkText, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link6.LinkText, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link6.LinkAddress, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link6.LinkAddress, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+    </div><br /><br />
+
+    @Html.LabelFor(model => model.FooterOld.Link7, new { @class = "control-label col-md-2" })
+
+    <div class="row">
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Text7, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Text7, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link7.LinkText, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link7.LinkText, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link7.LinkAddress, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link7.LinkAddress, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+    </div><br /><br />
+
+    @Html.LabelFor(model => model.FooterOld.Link8, new { @class = "control-label col-md-2" })
+
+    <div class="row">
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Text8, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Text8, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link8.LinkText, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link8.LinkText, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link8.LinkAddress, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link8.LinkAddress, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+    </div><br /><br />
+
+    @Html.LabelFor(model => model.FooterOld.Link9, new { @class = "control-label col-md-2" })
+
+    <div class="row">
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Text9, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Text9, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link9.LinkText, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link9.LinkText, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link9.LinkAddress, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link9.LinkAddress, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+    </div><br /><br />
+
+    @Html.LabelFor(model => model.FooterOld.Link10, new { @class = "control-label col-md-2" })
+
+    <div class="row">
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Text10, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Text10, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link10.LinkText, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link10.LinkText, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link10.LinkAddress, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link10.LinkAddress, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+    </div><br /><br />
+
+    @Html.LabelFor(model => model.FooterOld.Link11, new { @class = "control-label col-md-2" })
+
+    <div class="row">
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Text11, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Text11, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link11.LinkText, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link11.LinkText, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link11.LinkAddress, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link11.LinkAddress, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+    </div><br /><br />
+
+    @Html.LabelFor(model => model.FooterOld.Link12, new { @class = "control-label col-md-2" })
+
+    <div class="row">
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Text12, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Text12, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link12.LinkText, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link12.LinkText, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.FooterOld.Link12.LinkAddress, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.FooterOld.Link12.LinkAddress, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+    </div><br /><br />
+
+    <h4><strong>Geben Sie bitte neue Texte an oder lassen Sie die ursprüngliche Fassung</strong></h4>
+
+    <div class="form-horizontal">
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Title1, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Title1, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Title1, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Title2, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Title2, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Title2, "", new { @class = "text-danger" })
+            </div>
+        </div><br />
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link1, new { @class = "form-control" })<br />
+            @Html.LabelFor(model => model.FooterNew.Text1, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Text1, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Text1, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link1.LinkText, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link1.LinkText, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link1.LinkText, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link1.LinkAddress, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link1.LinkAddress, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link1.LinkAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link2, new { @class = "form-control" })<br />
+            @Html.LabelFor(model => model.FooterNew.Text2, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Text2, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Text2, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link2.LinkText, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link2.LinkText, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link2.LinkText, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link2.LinkAddress, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link2.LinkAddress, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link2.LinkAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link3, new { @class = "form-control" })<br />
+            @Html.LabelFor(model => model.FooterNew.Text3, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Text3, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Text3, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link3.LinkText, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link3.LinkText, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link3.LinkText, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link3.LinkAddress, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link3.LinkAddress, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link3.LinkAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link4, new { @class = "form-control" })<br />
+            @Html.LabelFor(model => model.FooterNew.Text4, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Text4, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Text4, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link4.LinkText, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link4.LinkText, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link4.LinkText, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link4.LinkAddress, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link4.LinkAddress, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link4.LinkAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link5, new { @class = "form-control" })<br />
+            @Html.LabelFor(model => model.FooterNew.Text5, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Text5, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Text5, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link5.LinkText, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link5.LinkText, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link5.LinkText, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link5.LinkAddress, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link5.LinkAddress, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link5.LinkAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link6, new { @class = "form-control" })<br />
+            @Html.LabelFor(model => model.FooterNew.Text6, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Text6, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Text6, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link6.LinkText, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link6.LinkText, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link6.LinkText, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link6.LinkAddress, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link6.LinkAddress, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link6.LinkAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link7, new { @class = "form-control" })<br />
+            @Html.LabelFor(model => model.FooterNew.Text7, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Text7, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Text7, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link7.LinkText, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link7.LinkText, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link7.LinkText, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link7.LinkAddress, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link7.LinkAddress, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link7.LinkAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link8, new { @class = "form-control" })<br />
+            @Html.LabelFor(model => model.FooterNew.Text8, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Text8, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Text8, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link8.LinkText, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link8.LinkText, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link8.LinkText, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link8.LinkAddress, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link8.LinkAddress, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link8.LinkAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link9, new { @class = "form-control" })<br />
+            @Html.LabelFor(model => model.FooterNew.Text9, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Text9, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Text9, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link9.LinkText, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link9.LinkText, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link9.LinkText, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link9.LinkAddress, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link9.LinkAddress, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link9.LinkAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link10, new { @class = "form-control" })<br />
+            @Html.LabelFor(model => model.FooterNew.Text10, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Text10, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Text10, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link10.LinkText, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link10.LinkText, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link10.LinkText, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link10.LinkAddress, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link10.LinkAddress, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link10.LinkAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link11, new { @class = "form-control" })<br />
+            @Html.LabelFor(model => model.FooterNew.Text11, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Text11, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Text11, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link11.LinkText, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link11.LinkText, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link11.LinkText, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link11.LinkAddress, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link11.LinkAddress, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link11.LinkAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link12, new { @class = "form-control" })<br />
+            @Html.LabelFor(model => model.FooterNew.Text12, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Text12, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Text12, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link12.LinkText, new { @class = "control-label col-md-2", })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link12.LinkText, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link12.LinkText, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FooterNew.Link12.LinkAddress, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FooterNew.Link12.LinkAddress, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FooterNew.Link12.LinkAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="ändern" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+
+        @Html.ActionLink("Zurück zur Administration", "Option", "AdminOption")
+}
+

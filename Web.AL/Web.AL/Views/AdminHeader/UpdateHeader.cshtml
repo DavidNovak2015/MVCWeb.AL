@@ -1,0 +1,120 @@
+﻿@model Web.AL.Models.AdminHeaderViewModel
+@{
+    ViewBag.Title = "UpdateHomePage";
+}
+
+<h2>Änderung der Heimatseite</h2>
+
+@using (Html.BeginForm())
+{
+    Html.AntiForgeryToken();
+    Html.ValidationSummary(true);
+
+    <div class="row">
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.HeaderOld.Title, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.HeaderOld.Title, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.HeaderOld.Text, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.HeaderOld.Text, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+     </div><br/>
+          
+             @Html.LabelFor(model => model.HeaderOld.Link1, new { @class= "control-label col-md-2" })   
+
+    <div class="row">
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.HeaderOld.Link1.LinkText, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.HeaderOld.Link1.LinkText, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.HeaderOld.Link1.LinkAddress, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.HeaderOld.Link1.LinkAddress, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+    </div><br/><br/>
+
+           @Html.LabelFor(model => model.HeaderOld.Link2,new { @class= "control-label col-md-2" })        
+
+    <div class="row">
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.HeaderOld.Link2.LinkText, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.HeaderOld.Link2.LinkText, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="col-md-2">
+            @Html.LabelFor(model => model.HeaderOld.Link2.LinkAddress, new { @class = "control-label col-md-2" })
+            @Html.TextBoxFor(model => model.HeaderOld.Link2.LinkAddress, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+    </div><br/><br/>
+    
+    <p><strong>Geben Sie bitte neue Texte an oder lassen Sie die ursprüngliche Fassung</strong></p>
+
+        <div class="form-horizontal">
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.HeaderNew.Title, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.HeaderNew.Title, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.HeaderNew.Title, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.HeaderNew.Text, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.HeaderNew.Text, new { @class = "form-control"}) 
+                    @Html.ValidationMessageFor(model => model.HeaderNew.Text, "", new { @class = "text-danger" })
+                </div>
+            </div><br/>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.HeaderNew.Link1, new { @class = "form-control" })<br/>
+                @Html.LabelFor(model => model.HeaderNew.Link1.LinkText, new { @class = "control-label col-md-2", })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.HeaderNew.Link1.LinkText, new { @class = "form-control" }) 
+                    @Html.ValidationMessageFor(model => model.HeaderNew.Link1.LinkText, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.HeaderNew.Link1.LinkAddress, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.HeaderNew.Link1.LinkAddress, new { @class = "form-control" }) 
+                    @Html.ValidationMessageFor(model => model.HeaderNew.Link1.LinkAddress, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.HeaderNew.Link2, new { @class = "form-control" })<br/>
+                @Html.LabelFor(model => model.HeaderNew.Link2.LinkText, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.HeaderNew.Link2.LinkText, new { @class = "form-control" }) 
+                    @Html.ValidationMessageFor(model => model.HeaderNew.Link2.LinkText, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.HeaderNew.Link2.LinkAddress, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.HeaderNew.Link2.LinkAddress, new { @class = "form-control" }) 
+                    @Html.ValidationMessageFor(model => model.HeaderNew.Link2.LinkAddress, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="ändern" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+
+        @Html.ActionLink("Zurück zur Administration","Option","AdminOption")
+}
+

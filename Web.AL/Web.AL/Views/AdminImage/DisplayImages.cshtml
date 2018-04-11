@@ -1,0 +1,30 @@
+﻿@model Web.AL.Models.AdminImageViewModel
+@{
+    ViewBag.Title = "DisplayImages";
+}
+
+<h2>Abbildung aller Bilder, die im Programm eingespeichert sind. </h2>
+
+@using (Html.BeginForm())
+{
+    Html.AntiForgeryToken();
+    Html.ValidationSummary(true);
+
+    foreach (string imagePath in Model.ImagePaths)
+    {
+        <div class="row">
+
+            <div class="col-md-2">
+                <img src="@imagePath" width="100" /><br/><br/>
+            </div>
+
+            <div class="col-md-2">
+                @Html.ActionLink("löschen", "DeleteImageConfirmation", "AdminImage", new { imagePathToDelete=imagePath }, new { @class = "btn btn-default" })            
+            </div>
+
+        </div>
+    }
+
+    @Html.ActionLink("Zurück zur Administration", "Option", "AdminOption", null, new { @class = "btn btn-default" })
+}
+

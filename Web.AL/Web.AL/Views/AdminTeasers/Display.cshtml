@@ -1,0 +1,50 @@
+﻿@model Web.AL.Models.AdminTeasersViewModel
+@{
+    ViewBag.Title = "AdminDisplayTeasers";
+}
+
+<h2>Abbildung aller Rubriken</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    foreach (var teaser in Model.Teasers)
+    {
+
+        <div class="row">
+            <div class="col-md-2">
+                @Html.LabelFor(m => teaser.Id, new { @class = "control-label" })
+                @Html.TextBoxFor(m => teaser.Id, new { @class = "form-control", @readonly = "readonly" })
+            </div>
+
+            <div class="col-md-2">
+                @Html.LabelFor(m => teaser.Title, new { @class = "control-label" })
+                @Html.TextBoxFor(m => teaser.Title, new { @class = "form-control", @readonly = "readonly" })
+            </div>
+
+            <div class="col-md-2">
+                @Html.LabelFor(m => teaser.Text, new { @class = "control-label" })
+                @Html.TextBoxFor(m => teaser.Text, new { @class = "form-control", @readonly = "readonly" })
+            </div>
+
+            <div class="col-md-2">
+                @Html.LabelFor(m => teaser.DateOfTeaser, new { @class = "control-label" })
+                @Html.TextBoxFor(m => teaser.DateOfTeaser,"{0:dd/MM/yyyy}" ,new { @class = "form-control", @readonly = "readonly" })
+            </div>
+
+            <div class="col-md-2">
+                <img src="@teaser.ImageName" width="150" />
+            </div>
+
+        </div>
+
+        @Html.ActionLink("Änderung dieser Rubrik", "UpDateFromDisplay", "AdminTeasers", new { teaserId=teaser.Id }, new { @class = "btn btn-default" })
+        <br /><br/>
+    }
+}
+
+
+    @Html.ActionLink("Zurück zur Administration", "Option", "AdminOption", null, new { @class = "btn btn-default" })
+

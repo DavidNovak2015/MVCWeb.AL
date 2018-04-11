@@ -1,0 +1,60 @@
+﻿@model Web.AL.Models.PageViewModel
+@{
+    ViewBag.Title = "DisplayPageWithOneTeaser";
+}
+
+
+
+<div class="jumbotron">
+
+<h2>@Model.Teaser.Title</h2>
+
+    <p>@Model.Teaser.Text</p>
+
+<p>@Model.Teaser.DateOfTeaser.ToShortDateString()</p>
+
+<p> <img src="@Model.Teaser.ImageName" width="300" /> </p><br/>
+
+<h4> @Html.ActionLink("Zurück zur Startseite", "Index", "Home", null, new { @class = "btn btn-default" })</h4><br />
+
+</div>
+<div class="col-md-6" style="text-align:center">
+    <h4>@Model.Footer.Title1</h4>
+
+    <div class="row">
+        @Model.Footer.Text1
+        <a href="@Model.Footer.Link1.LinkAddress">@Model.Footer.Link1.LinkText</a><br />
+        @Model.Footer.Text2
+        <a href="@Model.Footer.Link2.LinkAddress">@Model.Footer.Link2.LinkText</a><br />
+        @Model.Footer.Text3
+        <a href="@Model.Footer.Link3.LinkAddress">@Model.Footer.Link3.LinkText</a><br />
+        @Model.Footer.Text4
+        <a href="@Model.Footer.Link4.LinkAddress">@Model.Footer.Link4.LinkText</a><br />
+        @Model.Footer.Text5
+        <a href="@Model.Footer.Link5.LinkAddress">@Model.Footer.Link5.LinkText</a><br />
+        @Model.Footer.Text6
+        <a href="@Model.Footer.Link6.LinkAddress">@Model.Footer.Link6.LinkText</a><br />
+        @Model.Footer.Text7
+        <a href="@Model.Footer.Link7.LinkAddress">@Model.Footer.Link7.LinkText</a><br />
+        @Model.Footer.Text8
+        <a href="@Model.Footer.Link8.LinkAddress">@Model.Footer.Link8.LinkText</a><br />
+    </div>
+
+</div>
+
+<div class="col-md-6" style="text-align:center">
+    <h4>@Model.Footer.Title2</h4>
+
+    <div class="row">
+        @Model.Footer.Text9
+        <a href="@Model.Footer.Link9.LinkAddress">@Model.Footer.Link9.LinkText</a><br />
+        @Model.Footer.Text10
+        <a href="@Model.Footer.Link10.LinkAddress">@Model.Footer.Link10.LinkText</a><br />
+        @Model.Footer.Text11
+        <a href="@Model.Footer.Link11.LinkAddress">@Model.Footer.Link11.LinkText</a><br />
+        @Model.Footer.Text12
+        <a href="@Model.Footer.Link12.LinkAddress">@Model.Footer.Link12.LinkText</a><br />
+    </div>
+</div>
+
+

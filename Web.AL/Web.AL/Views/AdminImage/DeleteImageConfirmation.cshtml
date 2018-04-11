@@ -1,0 +1,24 @@
+﻿@model Web.AL.Models.AdminImageViewModel
+@{
+    ViewBag.Title = "DeleteImageConfirmation";
+}
+
+<h2>Wollen Sie wirklich dieses Bild löschen?</h2>
+
+@using (Html.BeginForm(Model))
+{
+    Html.AntiForgeryToken();
+    Html.ValidationSummary(true);
+
+    <div class="form-horizontal">
+
+        <img src="@Model.ImagePathToDelete" width="100" /><br /><br />
+
+
+        @Html.ActionLink("löschen", "DeleteImage", "AdminImage", new { imagePathToDelete=Model.ImagePathToDelete }, new { @class = "btn btn-default" })
+        <br /><br />
+        @Html.ActionLink("Zurück zur Administration", "Option", "AdminOption", null, new { @class = "btn btn-default" })
+
+    </div>
+}
+
